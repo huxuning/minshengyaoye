@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 避免兼容模式 -->
+    <meta name="renderer" content="webkit"><!-- 强制极速模式 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>芷醉</title>
+	<meta name="keywords" content="#"> <!-- 搜素引擎关键字 -->
+	<meta name="description" content="#"> <!-- 网站主要内容 -->
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/phone_about.css" media="(max-width:780px)" />
+	<link rel="stylesheet" type="text/css" href="../css/pc_about.css" media="(min-width:780px)"/>
+</head>
+<body>
+	<!-- 导航 -->
+	<div class="icon">
+		<img src="../img/select.png" alt="">
+	</div>
+	<div id="mylay" class="mylay">
+		<div class="close">
+			<img src="../img/close.png" alt="">
+			
+		</div>
+		
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a class="home" href="../index.html">主页</a></li>
+			<li><a class="lianxi" href="contactus.html">联系我们</a></li>
+			<li><a class="guanyu" href="minsheng.html">关于我们</a></li>
+		</ul>
+		<a target="_blank" href="#" class="weibo"><img src="../img/weibos.png" alt=""></a>
+		<a target="_blank" href="#" class="weixin"><img src="../img/weixinb.png" alt=""></a>
+	</div>
+	<!-- 内容 -->
+	<div class="contact_us_wrap">
+		<div class="contact_us">
+			<div class="left_bar">
+				<div class="bg"><img src="../img/cont_bg.png" alt=""></div>
+				<div class="btn1">
+					<div class="line"><img src="../img/line.png" alt=""></div>
+					<div class="y_point"><img src="../img/y_point.png" alt=""></div>
+					<button class="contact_way btn">联系方式</button>
+					<div class="line"><img src="../img/line.png" alt=""></div>
+				</div>
+				<div class="btn2">
+
+					<div class="y_point">
+						<img src="../img/y_point.png" alt="">
+					</div>
+					<button class="online_mess btn">在线留言</button>
+					<div class="line"><img src="../img/line.png" alt=""></div>
+				</div>
+				
+			</div>
+			<div class="right_cont">
+				<p class="rc_tit">联系我们</p>
+				<p class="rc_contents">
+					创立于1926年，中国最早的四大药厂之一，中国首批中华老字号企业，历经90年赞誉无数，旗下“21金维他”等产品家喻户晓！民生药业，凭着卓越的产品品质和数十亿元的广告投放，已成为中国最具知名度和影响力的品牌之一。
+				</p>
+				<table class="rc_table">
+					<tbody>
+						<tr>
+							<th>姓名</th>
+							<th>职务</th>
+							<th>联系电话</th>
+						</tr>
+						<tr>
+							<td>黄圳辉</td>
+							<td>地区经理</td>
+							<td>15813872126</td>
+						</tr>
+						<tr>
+							<td>张友中</td>
+							<td>地区经理</td>
+							<td>13924224408</td>
+						</tr>
+						<tr>
+							<td>唐超</td>
+							<td>地区经理</td>
+							<td>18688860083</td>
+						</tr>
+						<tr>
+							<td>雷锦文</td>
+							<td>地区经理</td>
+							<td>18664808130</td>
+						</tr>
+						<tr>
+							<td>郑枫斐</td>
+							<td>招商专员</td>
+							<td>13553779771</td>
+						</tr>
+						<tr>
+							<td>饶秉坤</td>
+							<td>地区经理</td>
+							<td>13060892090</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		</div>
+	</div>	
+</body>
+
+<script>
+(function($){
+//PC
+	if($(document).width()>780){
+		//nav
+		$('.icon').on('click',function(){
+			$('#mylay').show(200);
+			$(this).animate({right:'23.6%'},300,function(){
+				$('.icon').fadeOut(50);	
+			})
+			setTimeout(function(){
+				$('.close').fadeIn(200);
+			},600);
+			// 导航栏显示
+			$('.nav').show();
+			setTimeout(function(){
+				$('.home').animate({left:'34.83%'},400,function(){
+					$('.lianxi').animate({left:'23.77%'},400,function(){
+						$('.guanyu').animate({left:'23.77%'},400);
+					});
+				});				
+			},900);
+		});
+
+		// 点击后关闭遮罩层
+		$('.close').on('click','img',function(){
+			$('.nav ul').find('a').css({left:'100%'});
+			$('.nav').hide();
+			$('.close').fadeOut();
+			$('#mylay').hide();
+			$('.icon').show();
+			$('.icon').animate({right:'2.6%'},500);
+		});	
+	}
+	//移动端
+	if($(document).width()<=780){
+		//nav
+		(function(){
+			//打开
+			$('.icon').on('click',function(){
+				$('#mylay').show(200);
+				$(this).animate({right:'23.6%'},300,function(){
+					$('.icon').fadeOut(50);	
+				})
+				setTimeout(function(){
+					$('.close').fadeIn(200);
+				},600);
+				// 导航栏显示
+				$('.nav').show();
+				setTimeout(function(){
+					$('.home').animate({left:'34.83%'},400,function(){
+						$('.lianxi').animate({left:'16.2%'},400,function(){
+							$('.guanyu').animate({left:'16.2%'},400);
+						});	
+					});				
+				},900);
+			});
+
+			// 点击后关闭遮罩层
+			$('.close').on('click','img',function(){
+				$('.nav ul').find('a').css({left:'100%'});
+				$('.nav').hide();
+				$('.close').fadeOut();
+				$('#mylay').hide();
+				$('.icon').show();
+				$('.icon').animate({right:'2.6%'},500);
+			});			
+		})();
+	}
+})(jQuery);
+</script>
+
+
+</html>
